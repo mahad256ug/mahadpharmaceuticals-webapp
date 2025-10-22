@@ -4,8 +4,16 @@ from config.django.base import env
 
 DEBUG = False
 
-ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["localhost", "127.0.0.1"])
-CORS_ALLOWED_ORIGINS = env.list(
-    "CORS_ALLOWED_ORIGINS",
-    default=["http://localhost:3000", "http://127.0.0.1:3000"],
-)
+ALLOWED_HOSTS = [
+    "mahadpharmaceuticals.com",
+    "www.mahadpharmaceuticals.com",
+    "127.0.0.1",
+    "localhost",
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "https://mahadpharmaceuticals.com",
+    "https://www.mahadpharmaceuticals.com",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
