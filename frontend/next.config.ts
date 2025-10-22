@@ -2,18 +2,13 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
+  reactStrictMode: true,
+  // REMOVE output: 'export'
   images: {
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "127.0.0.1",
-        port: "8000",
-        pathname: "/**",
-      },
-      {
         protocol: "https",
-        hostname: "mahadpharmaceuticals.com",
-        port: "8000",
+        hostname: "mahadpharmaceuticals.com", // or www.mahadpharmaceuticals.com
         pathname: "/**",
       },
     ],
