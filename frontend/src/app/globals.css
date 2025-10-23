@@ -157,6 +157,7 @@
   animation: bounce-ani 2s ease infinite;
   animation-delay: 5s;
 }
+
 @keyframes bounce-ani {
   0%,
   20%,

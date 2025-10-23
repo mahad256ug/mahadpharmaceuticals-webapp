@@ -27,7 +27,7 @@ function DrugsPreview() {
         />
 
         <div className="bg-accent p-2 -mt-5">
-          <Link href="/drugs/hiv-test-kit">
+          <Link href="/drugs/hiv-testing-kit">
             <p className="text-black/80">HIV Testing Kit</p>
           </Link>
         </div>

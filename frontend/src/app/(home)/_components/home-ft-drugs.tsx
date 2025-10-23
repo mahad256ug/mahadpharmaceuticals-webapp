@@ -4,13 +4,13 @@ import React from "react";
 import { useQuery } from "@tanstack/react-query";
 // components
 import Loader from "@/components/common/Loader";
-import { server_getHomeDrugs } from "@/actions/getHomeDrugs";
 import FeaturedDrugCard from "@/components/card/FeaturedDrugCard";
+import { server_getHomeFtDrugs } from "@/actions/getHomeFtDrugs";
 
 const HomeFtDrugs = () => {
   const { data, isLoading, error } = useQuery({
     queryKey: ["home-ft-drugs"],
-    queryFn: () => server_getHomeDrugs(),
+    queryFn: () => server_getHomeFtDrugs(),
   });
 
   if (isLoading) {

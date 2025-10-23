@@ -22,9 +22,9 @@ export async function generateMetadata({
         "Explore detailed information, dosage, and pricing for this medicine.";
 
       return {
-        metadataBase: new URL(API_BASE_URL || "https://mahadpharma.com"),
+        metadataBase: new URL("https://mahadpharmaceuticals.com"),
         title: `${drug.name} | Mahad Pharmaceuticals`,
-        description: cleanDescription,
+        description: `$Mahad Pharmaceuticals ,${cleanDescription}`,
         keywords: [
           drug.name,
           "Mahad Pharmaceuticals",
@@ -45,7 +45,14 @@ export async function generateMetadata({
                   alt: drug.name,
                 },
               ]
-            : [],
+            : [
+                {
+                  url: "https://mahadpharmaceuticals.com/logo-og.png",
+                  width: 800,
+                  height: 600,
+                  alt: "Mahad Pharmaceuticals",
+                },
+              ],
           locale: "en_US",
           type: "website",
         },

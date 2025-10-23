@@ -24,7 +24,7 @@ const DrugCard = ({ ...props }: drugType) => {
         >
           <Image
             src={props.thumbnail ?? courrptImg}
-            alt={props.name}
+            alt={`${props.name} ${props.description}`}
             width={300}
             height={520}
           />

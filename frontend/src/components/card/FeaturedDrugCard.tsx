@@ -12,7 +12,7 @@ const FeaturedDrugCard = ({ ...drug }: drugType) => {
   return (
     <div
       style={{ backgroundImage: `url(${drug.thumbnail ?? "/default.jpg"})` }}
-      className="w-full h-full aspect-video bg-no-repeat bg-center bg-cover overflow-visible m-4 bg-red-500 p-4"
+      className="w-full h-full aspect-video bg-no-repeat bg-center bg-cover overflow-visible m-4 p-4"
     >
       <div className="h-full w-full bg-gradient-to-t from-black/50 via-black/20 to-transparent flex flex-col px-5 sm:px-10 justify-end text-white relative">
         {drug.status == "draft" && (

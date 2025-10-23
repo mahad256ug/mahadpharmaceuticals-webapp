@@ -21,7 +21,7 @@ interface Props {
 const PageContent = ({ slug }: Props) => {
   const { productsCart, addDrugToCart, removeDrugFromCart } = useStoreContext();
 
-  const { data, isLoading } = useQuery({
+  const { data } = useQuery({
     queryKey: ["drugs-details"],
     queryFn: () => server_getDrug(slug),
   });
@@ -34,16 +34,6 @@ const PageContent = ({ slug }: Props) => {
     `Hello Maha Pharmaceuticals, I want to buy: ${drug?.name}`
   );
   const whatsappLink = `https://wa.me/${PHONE_NO}?text=${message}`;
-
-  if (isLoading) {
-    return (
-      <div className="py-32">
-        <div className="flex items-center justify-center">
-          <Loader />
-        </div>
-      </div>
-    );
-  }
 
   if (!drug) {
     return (
