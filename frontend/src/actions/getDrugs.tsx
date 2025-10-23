@@ -1,4 +1,4 @@
-import { BASE_URL } from "@/lib/constants";
+import { API_BASE_URL } from "@/lib/constants";
 import { drugType, PaginatedResponseType } from "@/lib/types";
 
 export async function server_getDrugs(
@@ -11,7 +11,7 @@ export async function server_getDrugs(
     if (searchParam) params.append("search", searchParam);
     if (pageNum) params.append("page", pageNum);
 
-    const url = `${BASE_URL}drugs/${params.toString() ? `?${params}` : ""}`;
+    const url = `${API_BASE_URL}drugs/${params.toString() ? `?${params}` : ""}`;
 
     const res = await fetch(url, {
       headers: {

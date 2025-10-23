@@ -51,5 +51,6 @@ export const PHONE_NO: string = "+971522820802";
 export const NODE_ENV: string | "development" | "production" | undefined =
   process.env.NODE_ENV;
 
-export const BASE_URL =
-  process.env.NEXT_PUBLIC_BASE_URL! ?? "http://127.0.0.1:8000/api/";
+export const BASE_URL = "https://mahadpharmaceuticals.com";
+export const API_BASE_URL =
+  process.env.NEXT_PUBLIC_API_BASE_URL! ?? "http://127.0.0.1:8000/api/";

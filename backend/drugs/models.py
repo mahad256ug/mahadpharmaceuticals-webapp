@@ -1,9 +1,11 @@
 import os
-from typing import Iterable
 import uuid
 from django.db import models
 
 from django.utils.text import slugify
+import random
+import string
+from django.core.exceptions import ValidationError
 
 
 def upload_thumbnail(instance, filename):
@@ -39,6 +41,26 @@ class Drug(models.Model):
         return self.name
 
     def save(self, *args, **kwargs):
+        # Generate slug only if missing
         if self.name and not self.slug:
-            self.slug = slugify(self.name)
+            base_slug = slugify(self.name)
+            slug = base_slug
+            count = 0
+
+            # Ensure unique slug
+            while Drug.objects.filter(slug=slug).exclude(pk=self.pk).exists():
+                count += 1
+                random_suffix = "".join(
+                    random.choices(string.ascii_lowercase + string.digits, k=4)
+                )
+                slug = f"{base_slug}-{random_suffix}"
+
+                # Safety net: if something goes wrong, break after 10 attempts
+                if count > 10:
+                    raise ValidationError(
+                        "Unable to generate a unique slug for this drug."
+                    )
+
+            self.slug = slug
+
         super().save(*args, **kwargs)

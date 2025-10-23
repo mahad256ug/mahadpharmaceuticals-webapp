@@ -1,9 +1,9 @@
-import { BASE_URL } from "@/lib/constants";
+import { API_BASE_URL } from "@/lib/constants";
 import { drugType } from "@/lib/types";
 
 export async function server_getHomeFtDrugs(): Promise<drugType[]> {
   try {
-    let url = `${BASE_URL}drugs/home-featured/`;
+    let url = `${API_BASE_URL}drugs/home-featured/`;
 
     const res = await fetch(url, {
       headers: {
