@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 // components
-import { BASE_URL } from "@/lib/constants";
+import { API_BASE_URL } from "@/lib/constants";
 import { server_getDrug } from "@/actions/getDrug";
 import PageContent from "./_components/page-content";
 
@@ -22,7 +22,7 @@ export async function generateMetadata({
         "Explore detailed information, dosage, and pricing for this medicine.";
 
       return {
-        metadataBase: new URL(BASE_URL || "https://mahadpharma.com"),
+        metadataBase: new URL(API_BASE_URL || "https://mahadpharma.com"),
         title: `${drug.name} | Mahad Pharmaceuticals`,
         description: cleanDescription,
         keywords: [
