@@ -78,6 +78,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  other: {
+    "og:logo": "https://mahadpharmaceuticals.com/logo-og.png",
+  },
 };
 
 export default function RootLayout({
