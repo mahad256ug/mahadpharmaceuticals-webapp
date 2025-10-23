@@ -34,7 +34,7 @@ export async function generateMetadata({
           "healthcare products",
         ],
         openGraph: {
-          title: `${drug.name} | Mahad Pharmaceuticals`,
+          title: drug.name,
           description: cleanDescription,
           images: drug.thumbnail
             ? [
