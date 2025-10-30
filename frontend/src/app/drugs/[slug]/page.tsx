@@ -3,6 +3,7 @@ import { Metadata } from "next";
 // components
 import { server_getDrug } from "@/actions/getDrug";
 import PageContent from "./_components/page-content";
+import { splitTextByCommas } from "@/lib/utils";
 
 // dynamic metadata for SEO
 export async function generateMetadata({
@@ -25,7 +26,8 @@ export async function generateMetadata({
         title: `${drug.name} | Mahad Pharmaceuticals`,
         description: `Mahad Pharmaceuticals — ${cleanDescription}`,
         keywords: [
-          drug.name,
+          ...splitTextByCommas(drug.keywords ?? ""),
+          "Mahad's pharmacy",
           "Mahad Pharmaceuticals",
           "buy medicine online",
           "pharmacy UAE",

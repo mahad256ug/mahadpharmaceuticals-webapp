@@ -82,3 +82,10 @@ export function formatPhoneNumber(
   // Fallback: return as-is
   return digits;
 }
+
+export function splitTextByCommas(text: string): string[] {
+  return text
+    .split(",")
+    .map((item) => item.trim()) // remove spaces around each word
+    .filter((item) => item.length); // remove empty strings
+}

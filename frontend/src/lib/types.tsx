@@ -6,6 +6,7 @@ export interface drugType {
   price: string;
   view_price: boolean;
   featured: boolean;
+  keywords?: string;
   thumbnail: string | null; // nullable in case no image is uploaded
   status: "draft" | "public";
   created_at: string; // ISO datetime string

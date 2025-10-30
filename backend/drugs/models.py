@@ -26,6 +26,7 @@ class Drug(models.Model):
     description = models.TextField(blank=True)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     view_price = models.BooleanField(default=False)
+    keywords = models.CharField(max_length=1500, null=True, blank=True)
     featured = models.BooleanField(default=False)
     thumbnail = models.ImageField(upload_to=upload_thumbnail, null=True, blank=True)
     status = models.CharField(
@@ -42,7 +43,7 @@ class Drug(models.Model):
 
     def save(self, *args, **kwargs):
         # Generate slug only if missing
-        if self.name and not self.slug:
+        if self.name:
             base_slug = slugify(self.name)
             slug = base_slug
             count = 0
