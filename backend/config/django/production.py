@@ -55,3 +55,9 @@ REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "PAGE_SIZE": 25,
 }
+
+
+SESSION_COOKIE_AGE = 900  # 15 minutes
+
+# Optional: Reset expiry timer on each request (keep user active)
+SESSION_SAVE_EVERY_REQUEST = True
