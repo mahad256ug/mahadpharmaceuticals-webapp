@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 
 // components
-import { API_BASE_URL } from "@/lib/constants";
 import { server_getDrug } from "@/actions/getDrug";
 import PageContent from "./_components/page-content";
 
@@ -24,7 +23,7 @@ export async function generateMetadata({
       return {
         metadataBase: new URL("https://mahadpharmaceuticals.com"),
         title: `${drug.name} | Mahad Pharmaceuticals`,
-        description: `$Mahad Pharmaceuticals ,${cleanDescription}`,
+        description: `Mahad Pharmaceuticals — ${cleanDescription}`,
         keywords: [
           drug.name,
           "Mahad Pharmaceuticals",
@@ -36,6 +35,8 @@ export async function generateMetadata({
         openGraph: {
           title: drug.name,
           description: cleanDescription,
+          url: `https://mahadpharmaceuticals.com/drugs/${slug}`, // ✅ og:url
+          siteName: "Mahad Pharmaceuticals",
           images: drug.thumbnail
             ? [
                 {
@@ -55,6 +56,14 @@ export async function generateMetadata({
               ],
           locale: "en_US",
           type: "website",
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: `${drug.name} | Mahad Pharmaceuticals`,
+          description: cleanDescription,
+          images: [
+            drug.thumbnail || "https://mahadpharmaceuticals.com/logo-og.png",
+          ],
         },
       };
     }

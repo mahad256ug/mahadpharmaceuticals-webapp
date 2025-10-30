@@ -22,8 +22,10 @@ const PageContent = ({ slug }: Props) => {
   const { productsCart, addDrugToCart, removeDrugFromCart } = useStoreContext();
 
   const { data, isLoading } = useQuery({
-    queryKey: ["drugs-details"],
+    queryKey: ["drugs-details", slug],
     queryFn: () => server_getDrug(slug),
+    enabled: !!slug,
+    staleTime: 1000 * 120, // 2 minutes
   });
 
   const drug = data;
