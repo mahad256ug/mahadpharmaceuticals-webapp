@@ -23,8 +23,8 @@ export async function generateMetadata({
 
       return {
         metadataBase: new URL("https://mahadpharmaceuticals.com"),
-        title: `${drug.name} | Mahad Pharmaceuticals`,
-        description: `Mahad Pharmaceuticals — ${cleanDescription}`,
+        title: `${drug.name} | buy ${drug.name} UAE`,
+        description: `buy ${drug.name} Mahad Pharmaceuticals — ${cleanDescription} bu`,
         keywords: [
           ...splitTextByCommas(drug.keywords ?? ""),
           "Mahad's pharmacy",

@@ -23,13 +23,13 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://mahadpharmaceuticals.com"),
   title: {
     default:
-      "Mahad Pharmaceuticals | Women’s Health, Family Planning & Online Pharmacy UAE",
+      "Mahad Pharmaceuticals | Mahad's pharmacy Women’s Health, Family Planning, Abortion pills & Online Pharmacy UAE",
     template: "%s | Mahad Pharmaceuticals",
   },
   description:
-    "Mahad Pharmaceuticals is a trusted online pharmacy in the UAE offering women’s health and family planning drugs, contraceptives, and secure online consultations. Enjoy fast delivery and cash on delivery across the UAE.",
+    "Mahad's pharmacy is a trusted online pharmacy in the UAE offering women’s health and family planning drugs, contraceptives, buy contraceptives, abortion pills, herbs in UAE and secure online consultations. Enjoy fast delivery and cash on delivery across the UAE.",
   keywords:
-    "online pharmacy UAE, women's health, family planning, contraceptives, reproductive care, health drugs, online consultation, cash on delivery pharmacy, Mahad Pharmaceuticals mahad's pharmacy, STD, sexual transmitted diseases",
+    "online pharmacy UAE, Abortion pills, lydia, women's health, family planning, contraceptives, reproductive care, health drugs, online consultation, cash on delivery pharmacy, Mahad Pharmaceuticals mahad's pharmacy, STD, sexual transmitted diseases, HIV, vigra, buy abortion pill UAE, by abortion pill dubai, buy abortion pill Abu Dhabi, buy abortion pill Umm Al Quwain, buy abortion pill in Madinat Zayed, buy abortion pill Kalba",
   icons: {
     icon: [
       { url: "/favicon-96x96.png", type: "image/png", sizes: "96x96" },
