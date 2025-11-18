@@ -3,8 +3,8 @@
 import { Resend } from "resend";
 import { PHONE_NO } from "@/lib/constants";
 import ContactMessage from "@/emails/ContactMessage";
-import verifyTurnstileToken from "@/actions/verifyTurnsile";
 
+const SECRET_KEY = process.env.TURNSTILE_SECRET_KEY;
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export interface ContactFormValues {
@@ -13,6 +13,14 @@ export interface ContactFormValues {
   subject?: string;
   message?: string;
   token?: string;
+}
+
+interface TurnstileResponse {
+  success: boolean;
+  "error-codes"?: string[];
+  challenge_ts?: string;
+  hostname?: string;
+  action?: string;
 }
 
 export async function contactAction(values: ContactFormValues) {
@@ -28,9 +36,21 @@ export async function contactAction(values: ContactFormValues) {
     }
 
     // Verify Turnstile token
-    const verification = await verifyTurnstileToken(token);
+    const ver = await fetch(
+      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          secret: SECRET_KEY,
+          response: token,
+        }),
+      }
+    );
 
-    if (!verification.success) {
+    const verification = (await ver.json()) as TurnstileResponse;
+
+    if (!verification?.success) {
       return {
         success: false,
         error: "Invalid CAPTCHA. Please try again.",
