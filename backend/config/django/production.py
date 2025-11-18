@@ -23,7 +23,7 @@ CORS_ALLOWED_ORIGINS = [
 # ALLOWED FILE UPLOADS (optional)
 # ------------------------
 DATA_UPLOAD_MAX_MEMORY_SIZE = 5242880  # 5MB
-FILE_UPLOAD_PERMISSIONS = 0o644
+FILE_UPLOAD_PERMISSIONS = 644
 
 
 # ------------------------
