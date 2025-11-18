@@ -23,3 +23,5 @@ async function verifyTurnstileToken(token: string): Promise<TurnstileResponse> {
 
   return (await response.json()) as TurnstileResponse;
 }
+
+export default verifyTurnstileToken;

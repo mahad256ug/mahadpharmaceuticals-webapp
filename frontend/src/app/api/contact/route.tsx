@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { PHONE_NO } from "@/lib/constants";
 import ContactMessage from "@/emails/ContactMessage";
+import verifyTurnstileToken from "@/actions/verifyTurnsile";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -11,7 +12,7 @@ export async function POST(req: Request) {
     const values = await req.json();
     const get = (key: string) => values[key as keyof typeof values];
     const { name, email, subject, message } = values;
-    const token = get("g-recaptcha-response");
+    const token = get("cf-turnstile-response");
 
     if (!name || !email || !subject || !message || !token) {
       return NextResponse.json(
@@ -23,13 +24,12 @@ export async function POST(req: Request) {
     const verification = await verifyTurnstileToken(token);
 
     if (!verification.success) {
-      console.error("reCAPTCHA failed:", verification["error-codes"]);
+      console.error("reCAPTCHA failed:", verification);
       return NextResponse.json(
         { error: "Invalid reCAPTCHA. Please try again." },
         { status: 400 }
       );
     }
-    console.log("calling api");
 
     // sending email
     const { data, error } = await resend.emails.send({

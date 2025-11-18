@@ -8,7 +8,6 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { PHONE_NO } from "@/lib/constants";
 import { LocateFixedIcon } from "lucide-react";
 import { formatPhoneNumber } from "@/lib/utils";
-import ReCAPTCHAField from "@/components/ReCAPTCHAField";
 import SectionHead from "@/components/Animations/SectionHead";
 import MaxWidthWrapper from "@/components/common/MaxWidthWrapper";
 
@@ -24,14 +23,9 @@ const PageContent = () => {
     const formData = new FormData(form);
     const values = Object.fromEntries(formData.entries());
 
-    const token = await recaptchaRef.current?.getValue();
-    if (!token) {
-      alert("Please verify reCAPTCHA");
-      setLoading(false);
-      return;
-    }
+    const payload = { ...values };
 
-    const payload = { ...values, token };
+    console.log(payload);
 
     try {
       const res = await fetch("/api/contact/", {
