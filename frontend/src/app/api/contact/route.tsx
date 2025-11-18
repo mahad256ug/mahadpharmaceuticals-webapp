@@ -61,7 +61,6 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ ok: true, id: data?.id }, { status: 200 });
   } catch (err) {
-    console.log("Contact API Error:", err);
     return NextResponse.json(
       { error: "Internal server error. Please try again later." },
       { status: 500 }
