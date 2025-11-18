@@ -38,7 +38,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const productsRoutes: routeType = drugs.map((drug) => ({
     url: `/drugs/${drug.slug}`,
     changeFrequency: "daily",
-    priority: 0.6,
+    priority: 1,
   }));
 
   const allRoutes: routeType = [...staticRoutes, ...productsRoutes];

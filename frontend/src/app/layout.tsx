@@ -22,12 +22,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://mahadpharmaceuticals.com"),
   title: {
-    default:
-      "Mahad Pharmaceuticals | Mahad's pharmacy Women’s Health, Family Planning, Abortion pills & Online Pharmacy UAE",
-    template: "%s | Mahad Pharmaceuticals",
+    default: "Mahad Pharmaceuticals | Abortion Pill | Medical Abortion in UAE",
+    template: "%s | Abortion in UAE",
   },
   description:
-    "Mahad's pharmacy is a trusted online pharmacy in the UAE offering women’s health and family planning drugs, contraceptives, buy contraceptives, abortion pills, herbs in UAE and secure online consultations. Enjoy fast delivery and cash on delivery across the UAE.",
+    "Mahad Pharmaceuticals offers safe, genuine abortion pills and confidential medical abortion support in the UAE. Fast guidance, trusted products, and discreet service. buy abortion pills, contraceptives cash on delievery",
   keywords:
     "online pharmacy UAE, Abortion pills, lydia, women's health, family planning, contraceptives, reproductive care, health drugs, online consultation, cash on delivery pharmacy, Mahad Pharmaceuticals mahad's pharmacy, STD, sexual transmitted diseases, HIV, vigra, buy abortion pill UAE, by abortion pill dubai, buy abortion pill Abu Dhabi, buy abortion pill Umm Al Quwain, buy abortion pill in Madinat Zayed, buy abortion pill Kalba",
   icons: {
