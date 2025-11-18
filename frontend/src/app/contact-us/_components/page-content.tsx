@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
 
 // components
 import { PHONE_NO } from "@/lib/constants";
@@ -10,9 +9,9 @@ import { LocateFixedIcon } from "lucide-react";
 import { formatPhoneNumber } from "@/lib/utils";
 import SectionHead from "@/components/Animations/SectionHead";
 import MaxWidthWrapper from "@/components/common/MaxWidthWrapper";
+import { contactAction } from "@/actions/contact";
 
 const PageContent = () => {
-  const recaptchaRef = useRef<ReCAPTCHA | null>(null);
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -20,31 +19,35 @@ const PageContent = () => {
     setLoading(true);
 
     const form = e.currentTarget;
+    // Turn FormData → plain object
     const formData = new FormData(form);
-    const values = Object.fromEntries(formData.entries());
 
-    const payload = { ...values };
+    // Extract form fields
+    const name = (formData.get("name") as string) || "";
+    const email = (formData.get("email") as string) || "";
+    const subject = (formData.get("subject") as string) || "";
+    const message = (formData.get("message") as string) || "";
 
-    console.log(payload);
+    // Get Turnstile token
+    const token = (formData.get("cf-turnstile-response") as string) || "";
 
     try {
-      const res = await fetch("/api/contact/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
+      const result = await contactAction({
+        name,
+        email,
+        subject,
+        message,
+        token,
       });
 
-      if (res.ok) {
+      if (result?.success) {
         alert("Message sent successfully!");
         form.reset();
-        recaptchaRef.current?.reset(); // 🟢 reset AFTER success
       } else {
-        alert("Failed to send message");
+        alert(result?.error || "Failed to send message");
       }
     } catch (err) {
-      console.log(err);
+      console.error(err);
       alert("Error submitting form");
     }
 
