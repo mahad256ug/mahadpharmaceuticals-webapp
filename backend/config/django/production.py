@@ -61,3 +61,15 @@ SESSION_COOKIE_AGE = 900  # 15 minutes
 
 # Optional: Reset expiry timer on each request (keep user active)
 SESSION_SAVE_EVERY_REQUEST = True
+
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": env("DB_NAME"),
+        "USER": env("DB_USER"),
+        "HOST": env("DB_HOST"),
+        "PASSWORD": env("DB_PASSWORD"),
+        "PORT": env("DB_PORT"),
+    }
+}

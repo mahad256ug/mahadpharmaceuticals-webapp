@@ -5,7 +5,6 @@ import { PHONE_NO } from "@/lib/constants";
 import ContactMessage from "@/emails/ContactMessage";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const recaptchaKey = process.env.RECAPTCHA_SECRET_KEY;
 
 export async function POST(req: Request) {
   try {
@@ -21,24 +20,10 @@ export async function POST(req: Request) {
       );
     }
 
-    // ✅ Verify reCAPTCHA with Google
-    const params = new URLSearchParams();
-    params.append("secret", recaptchaKey ?? "");
-    params.append("response", token);
+    const verification = await verifyTurnstileToken(token);
 
-    const recaptchaRes = await fetch(
-      "https://www.google.com/recaptcha/api/siteverify",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: params.toString(),
-      }
-    );
-
-    const recaptchaData = await recaptchaRes.json();
-
-    if (!recaptchaData.success) {
-      console.error("reCAPTCHA failed:", recaptchaData);
+    if (!verification.success) {
+      console.error("reCAPTCHA failed:", verification["error-codes"]);
       return NextResponse.json(
         { error: "Invalid reCAPTCHA. Please try again." },
         { status: 400 }

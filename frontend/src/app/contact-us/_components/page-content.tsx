@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
 // components
@@ -19,19 +19,19 @@ const PageContent = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    const form = e.currentTarget;
 
+    const form = e.currentTarget;
     const formData = new FormData(form);
     const values = Object.fromEntries(formData.entries());
 
     const token = await recaptchaRef.current?.getValue();
-    recaptchaRef.current?.reset();
-
     if (!token) {
       alert("Please verify reCAPTCHA");
       setLoading(false);
       return;
     }
+
+    const payload = { ...values, token };
 
     try {
       const res = await fetch("/api/contact/", {
@@ -39,19 +39,41 @@ const PageContent = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(values),
+        body: JSON.stringify(payload),
       });
 
       if (res.ok) {
         alert("Message sent successfully!");
         form.reset();
+        recaptchaRef.current?.reset(); // 🟢 reset AFTER success
+      } else {
+        alert("Failed to send message");
       }
     } catch (err) {
       console.log(err);
+      alert("Error submitting form");
     }
 
     setLoading(false);
   };
+
+  useEffect(() => {
+    // Load Turnstile script
+    const script = document.createElement("script");
+    script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js";
+    script.async = true;
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      const existingScript = document.querySelector(
+        'script[src="https://challenges.cloudflare.com/turnstile/v0/api.js"]'
+      );
+      if (existingScript) {
+        document.head.removeChild(existingScript);
+      }
+    };
+  }, []);
 
   const whatsAppIntialMessage = "Hello Maha, am from the site.";
 
@@ -164,7 +186,13 @@ const PageContent = () => {
             required
           ></textarea>
 
-          <ReCAPTCHAField recaptchaRef={recaptchaRef} />
+          <div
+            className="cf-turnstile"
+            data-sitekey="0x4AAAAAACBmAm__R7iuh8bu"
+            data-theme="light"
+            data-size="normal"
+            data-callback="onSuccess"
+          ></div>
 
           <button
             type="submit"
