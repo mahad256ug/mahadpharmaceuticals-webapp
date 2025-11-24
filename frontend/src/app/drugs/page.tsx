@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   keywords:
     "Find safe, genuine abortion pills and contraceptives in the UAE with discreet delivery and reliable support. Trusted medical abortion information, privacy-focused service, and access to essential reproductive health products.",
   description:
-    "UAE medical info source for abortion pills contraceptives, men’s health, and general medicines  in Dubai, Abu Dhabi, Sharjah, Ajman, Fujairah, RAK, and Umm Al Quwain erectile dysfunction ",
+    "UAE medical info source for abortion pills contraceptives, erectile dysfunction (ED) and men’s health near me in Dubai, Abu Dhabi, Sharjah, Ajman, Fujairah, RAK, and Umm Al Quwain contact +971522820802",
 };
 
 const page = () => {

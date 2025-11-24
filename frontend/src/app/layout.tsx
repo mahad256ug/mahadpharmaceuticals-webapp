@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | Abortion in UAE",
   },
   description:
-    "Genuine abortion pill uae, contraceptives in uae, erectile dysfunction uae and confidential whatsapp or call +971522820802 medical abortion support in the UAE Dubai, Abu Dhabi, Sharjah, Ajman, Fujairah, RAK, and Umm Al Quwain erectile. Fast guidance, trusted products, and discreet service. buy abortion pills,  cash on delievery abortion pharmacy uae",
+    "Buy genuine abortion pill uae, contraceptives in uae, erectile dysfunction (ED) uae and confidential near me whatsapp or call +971522820802 medical abortion support in the UAE Dubai, Abu Dhabi, Sharjah, Ajman, Fujairah, RAK, and Umm Al Quwain erectile. trusted products, cash on delievery",
   keywords:
     "online pharmacy UAE, Abortion pills, lydia, women's health, family planning, contraceptives, reproductive care, health drugs, online consultation, cash on delivery pharmacy, Mahad Pharmaceuticals mahad's pharmacy, STD, sexual transmitted diseases, HIV, vigra, buy abortion pill UAE, by abortion pill dubai, buy abortion pill Abu Dhabi, buy abortion pill Umm Al Quwain, buy abortion pill in Madinat Zayed, buy abortion pill Kalba",
   icons: {

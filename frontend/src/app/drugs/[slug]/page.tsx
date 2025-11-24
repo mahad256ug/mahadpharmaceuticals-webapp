@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 // components
+import { splitTextByCommas } from "@/lib/utils";
 import { server_getDrug } from "@/actions/getDrug";
 import PageContent from "./_components/page-content";
-import { splitTextByCommas } from "@/lib/utils";
 
 // dynamic metadata for SEO
 export async function generateMetadata({
@@ -27,7 +27,7 @@ export async function generateMetadata({
 
       return {
         metadataBase: new URL("https://mahadpharmaceuticals.com"),
-        title: `${drug.name} pill | buy ${drug.name}  uae, Dubai, Abu Dhabi, Sharjah, Ajman, Fujairah, RAK, and Umm Al Quwain erectile dysfunction sexual near me `,
+        title: `buy ${drug.name} pill near me whatsapp or contact +971522820802 in  uae, Dubai, Abu Dhabi, Sharjah, Ajman, Fujairah, RAK, and Umm Al Quwain erectile dysfunction sexual near me `,
         description: `buy ${drug.name} Mahad Pharmaceuticals — ${cleanDescription} bu`,
         keywords: [
           ...splitTextByCommas(drug.keywords ?? ""),

@@ -6,9 +6,9 @@ import PageContent from "./_components/page-content";
 
 export const metadata: Metadata = {
   title:
-    "Contact about contrapective, abortion pill and ED pills | Customer Support & Pharmacy Assistance",
+    "Contact about contrapective, abortion pill and ED pills | Customer Support & Pharmacy Assistance in uae.",
   description:
-    "Contact us for discreet guidance on safe abortion pills and reliable contraceptives in the UAE. We offer confidential support, genuine products, and trusted reproductive health assistance. Reach out anytime for private help and fast responses.",
+    "safe abortion pills and reliable contraceptives in the UAE. We offer confidential support, genuine products, and trusted reproductive health assistance. Reach out anytime for private help and fast responses.",
   keywords:
     "Mahad Pharmaceuticals contact, pharmacy customer support, online pharmacy UAE, buy medicine online, pharmaceutical assistance, medicine delivery, health advice, prescription help, pharmacy near me, Mahad Pharma support, drug store contact",
 };
