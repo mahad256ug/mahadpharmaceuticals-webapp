@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "About Mahad Abortion Pharmaceuticals.",
   keywords: "",
   description:
-    "Mahad Pharmaceuticals offers safe abortion pills, trusted contraceptives, and effective sexual desire supplements in the UAE. We provide discreet, reliable guidance and confidential support for all your reproductive and sexual health needs.",
+    "Abortion pills contraceptives, men’s health, and general medicines near me contact +971522820802  in Dubai, Abu Dhabi, Sharjah, Ajman, Fujairah, RAK, and Umm Al Quwain erectile dysfunction sexual need,.",
 };
 
 const page = () => {

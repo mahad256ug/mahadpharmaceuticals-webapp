@@ -22,11 +22,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://mahadpharmaceuticals.com"),
   title: {
-    default: "Mahad Pharmaceuticals | Abortion Pill | Medical Abortion in UAE",
+    default:
+      "Abortion pills in uae | contraceptives in uae | erectile dysfunction in UAE",
     template: "%s | Abortion in UAE",
   },
   description:
-    "Mahad Pharmaceuticals offers safe, genuine abortion pills and confidential medical abortion support in the UAE. Fast guidance, trusted products, and discreet service. buy abortion pills, contraceptives cash on delievery",
+    "Genuine abortion pill uae, contraceptives in uae, erectile dysfunction uae and confidential whatsapp or call +971522820802 medical abortion support in the UAE Dubai, Abu Dhabi, Sharjah, Ajman, Fujairah, RAK, and Umm Al Quwain erectile. Fast guidance, trusted products, and discreet service. buy abortion pills,  cash on delievery abortion pharmacy uae",
   keywords:
     "online pharmacy UAE, Abortion pills, lydia, women's health, family planning, contraceptives, reproductive care, health drugs, online consultation, cash on delivery pharmacy, Mahad Pharmaceuticals mahad's pharmacy, STD, sexual transmitted diseases, HIV, vigra, buy abortion pill UAE, by abortion pill dubai, buy abortion pill Abu Dhabi, buy abortion pill Umm Al Quwain, buy abortion pill in Madinat Zayed, buy abortion pill Kalba",
   icons: {
@@ -40,9 +41,9 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
   openGraph: {
     title:
-      "Mahad Pharmaceuticals | Trusted Online Pharmacy for Women’s Health & Family Planning",
+      "Abortion pills in uae | contraceptives in uae | erectile dysfunction in UAE",
     description:
-      "Order women’s health and family planning drugs online from Mahad Pharmaceuticals. Licensed pharmacy offering fast delivery and cash on delivery across the UAE.",
+      "Abortion pills in uae | contraceptives in uae | erectile dysfunction in UAE.",
     url: "https://mahadpharmaceuticals.com",
     siteName: "Mahad Pharmaceuticals",
     images: [
