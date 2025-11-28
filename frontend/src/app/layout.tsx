@@ -22,12 +22,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://mahadpharmaceuticals.com"),
   title: {
-    default: "Abortion, contraceptives and ED in UAE",
+    default: "Abortion pills in uae, contraceptives and ED in UAE",
     template: "%s | Abortion in UAE",
   },
 
   description:
-    "Buy trusted reproductive health, contraceptives & ED wellness products in the UAE near me whatsapp or call +971522820802 for medical abortion Discreet service, COD, and confidential support across all Emirates",
+    "Buy abortion pill near me in uae, contraceptives & ED drugs products in the UAE near me whatsapp or call +971522820802 Cash on delivery in all Emirates",
   alternates: {
     canonical: "/", // or dynamic path
   },

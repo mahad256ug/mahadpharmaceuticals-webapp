@@ -7,9 +7,9 @@ import DrugsPageContent from "./_components/page-content";
 export const metadata: Metadata = {
   title: "find and buy abortion, contraceptives ED in UAE",
   keywords:
-    "Find safe, genuine abortion pills and contraceptives in the UAE with discreet delivery and reliable support. Trusted medical abortion information, privacy-focused service, and access to essential reproductive health products.",
+    " genuine abortion pills and contraceptives in the UAE . Trusted medical abortion information, privacy-focused service, and access to essential reproductive health products.",
   description:
-    "For abortion pills, contraceptives, ED and sexual herbs in Dubai, Abu Dhabi, Sharjah and other emirates. Call +971522820802",
+    "Find safe abortion pills in uae, contraceptives in uae, ED with discreet delivery cash on delivery and reliable support accross Dubai, Abu Dhabi, Sharjah and other emirates. Call +971522820802",
   alternates: {
     canonical: "/drugs",
   },

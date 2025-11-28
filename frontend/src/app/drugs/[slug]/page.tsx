@@ -19,8 +19,8 @@ export async function generateMetadata({
     if (drug) {
       const cleanDescription = drug.description
         ?.replace(/<[^>]+>/g, "")
-        .slice(0, 160)
-        ? `${drug.name} in uae Dubai, Abu Dhabi, Sharjah, Ajman, Fujairah, RAK, and Umm Al Quwain erectile dysfunction sexual near me +971522820802, ${drug.description
+        .slice(0, 150)
+        ? `in uae Dubai, Abu Dhabi, Sharjah, Ajman, Fujairah, RAK, and Umm Al Quwain erectile dysfunction sexual near me +971522820802, ${drug.description
             ?.replace(/<[^>]+>/g, "")
             .slice(0, 160)}`
         : "Explore detailed information, dosage, and pricing for this medicine.";
@@ -28,7 +28,7 @@ export async function generateMetadata({
       return {
         metadataBase: new URL("https://mahadpharmaceuticals.com"),
         title: `buy ${drug.name} pill near me whatsapp or contact +971522820802 in  uae, Dubai, Abu Dhabi, Sharjah, Ajman, Fujairah, RAK, and Umm Al Quwain erectile dysfunction sexual near me `,
-        description: `buy ${drug.name} Mahad Pharmaceuticals — ${cleanDescription} bu`,
+        description: `buy ${drug.name} — ${cleanDescription} bu`,
         keywords: [
           ...splitTextByCommas(drug.keywords ?? ""),
           "Mahad's pharmacy",
