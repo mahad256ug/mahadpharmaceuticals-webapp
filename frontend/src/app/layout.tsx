@@ -22,12 +22,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://mahadpharmaceuticals.com"),
   title: {
-    default:
-      "Abortion pills in uae | contraceptives in uae | erectile dysfunction in UAE",
+    default: "Abortion, contraceptives and ED in UAE",
     template: "%s | Abortion in UAE",
   },
+
   description:
-    "Buy genuine abortion pill uae, contraceptives in uae, erectile dysfunction (ED) uae and confidential near me whatsapp or call +971522820802 medical abortion support in the UAE Dubai, Abu Dhabi, Sharjah, Ajman, Fujairah, RAK, and Umm Al Quwain erectile. trusted products, cash on delievery",
+    "Buy trusted reproductive health, contraceptives & ED wellness products in the UAE near me whatsapp or call +971522820802 for medical abortion Discreet service, COD, and confidential support across all Emirates",
+  alternates: {
+    canonical: "/", // or dynamic path
+  },
   keywords:
     "online pharmacy UAE, Abortion pills, lydia, women's health, family planning, contraceptives, reproductive care, health drugs, online consultation, cash on delivery pharmacy, Mahad Pharmaceuticals mahad's pharmacy, STD, sexual transmitted diseases, HIV, vigra, buy abortion pill UAE, by abortion pill dubai, buy abortion pill Abu Dhabi, buy abortion pill Umm Al Quwain, buy abortion pill in Madinat Zayed, buy abortion pill Kalba",
   icons: {

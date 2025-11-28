@@ -17,9 +17,9 @@ const Hero = () => {
               Effective Medicine, New Medicine Everyday
             </p>
 
-            <h2 className="text-4xl md:text-5xl text-white leading-tight my-5">
+            <h1 className="text-4xl md:text-5xl text-white leading-tight my-5">
               Welcome to Mahad Pharmaceuticals
-            </h2>
+            </h1>
             <p className="text-white/80">
               Trusted online pharmacy in the UAE, offering prescription and
               over-the-counter medicines with fast, secure delivery and

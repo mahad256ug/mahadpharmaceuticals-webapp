@@ -10,7 +10,10 @@ export const metadata: Metadata = {
   keywords:
     "My drugs, pharmacy cart, buy pills online, order prescription drugs, healthcare products, over the counter medicines, wellness supplements, online pharmacy UAE, affordable medicines, drug delivery, pharmacy checkout, pharmaceutical store, medical supplies, health and wellness, secure online pharmacy, pharmacy near me, medicine shopping cart, healthcare delivery UAE, online prescription refill, pharmacy offers",
   description:
-    "abortion pill, contraceptives, erectile dysfunction (ED) uae after whatsapp or contact +971522820802 cart.",
+    "abortion pill, contraceptives, erectile dysfunction (ED) near me in uae after whatsapp or contact +971522820802 cart.",
+  alternates: {
+    canonical: `/cart/`,
+  },
 };
 
 const page = () => {

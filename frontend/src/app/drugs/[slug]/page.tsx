@@ -38,6 +38,9 @@ export async function generateMetadata({
           "prescription drugs",
           "healthcare products",
         ],
+        alternates: {
+          canonical: `/drugs/${slug}`,
+        },
         openGraph: {
           title: drug.name,
           description: cleanDescription,
@@ -54,7 +57,9 @@ export async function generateMetadata({
               ]
             : [
                 {
-                  url: "https://mahadpharmaceuticals.com/logo-og.png",
+                  url:
+                    drug.thumbnail ??
+                    "https://mahadpharmaceuticals.com/logo-og.png",
                   width: 800,
                   height: 600,
                   alt: "Mahad Pharmaceuticals",
@@ -68,7 +73,7 @@ export async function generateMetadata({
           title: `${drug.name} | Mahad Pharmaceuticals`,
           description: cleanDescription,
           images: [
-            drug.thumbnail || "https://mahadpharmaceuticals.com/logo-og.png",
+            drug.thumbnail ?? "https://mahadpharmaceuticals.com/logo-og.png",
           ],
         },
       };

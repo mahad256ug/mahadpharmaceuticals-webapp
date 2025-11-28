@@ -66,7 +66,7 @@ const PageContent = ({ slug }: Props) => {
       <div className="flex flex-col gap-5 max-w-3xl ">
         <div className="px-4">
           <div className="flex items-start gap-4 justify-between flex-wrap relative mb-5">
-            <h3 className="text-3xl uppercase">{drug.name}</h3>
+            <h1 className="text-3xl uppercase">{drug.name}</h1>
             <div className="flex items-center gap-2 w-fit">
               {exists ? (
                 <button

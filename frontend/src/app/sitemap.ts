@@ -24,7 +24,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes: routeType = navLink.map((link) => ({
     url: link.href,
     priority: 1,
-    changeFrequency: "daily",
+    changeFrequency: "weekly",
   }));
 
   let drugs: drugType[] = [];
@@ -37,7 +37,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const productsRoutes: routeType = drugs.map((drug) => ({
     url: `/drugs/${drug.slug}`,
-    changeFrequency: "daily",
+    changeFrequency: "weekly",
     priority: 1,
   }));
 
