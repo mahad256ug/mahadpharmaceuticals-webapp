@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   keywords:
     "Mahad Pharmaceuticals contact, pharmacy customer support, online pharmacy UAE, buy medicine online, pharmaceutical assistance, medicine delivery, health advice, prescription help, pharmacy near me, Mahad Pharma support, drug store contact",
   alternates: {
-    canonical: `/contact-us/`,
+    canonical: `/contact-us`,
   },
 };
 

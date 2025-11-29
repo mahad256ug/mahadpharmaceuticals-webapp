@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "abortion pill, contraceptives, erectile dysfunction (ED) near me in uae after whatsapp or contact +971522820802 cart.",
   alternates: {
-    canonical: `/cart/`,
+    canonical: `/cart`,
   },
 };
 

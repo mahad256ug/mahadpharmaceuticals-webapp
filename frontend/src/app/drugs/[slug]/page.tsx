@@ -27,7 +27,7 @@ export async function generateMetadata({
 
       return {
         metadataBase: new URL("https://mahadpharmaceuticals.com"),
-        title: `buy ${drug.name} pill near me whatsapp or contact +971522820802 in  uae, Dubai, Abu Dhabi, Sharjah, Ajman, Fujairah, RAK, and Umm Al Quwain erectile dysfunction sexual near me `,
+        title: `buy ${drug.name} pill | contraceptive near me whatsapp or contact +971522820802 in uae`,
         description: `buy ${drug.name} — ${cleanDescription} bu`,
         keywords: [
           ...splitTextByCommas(drug.keywords ?? ""),
